@@ -74,6 +74,8 @@ Este projeto é baseado na playlist **"Lago do Mago"** de **Téo Me Why**, dispo
 
 🔗 [Playlist Lago do Mago - YouTube](https://www.youtube.com/playlist?list=PLvlkVRRKOYFTcLehYZ2Bd5hGIcLH0dJHE)
 
+GitHub: [@TeoMeWhy](https://github.com/TeoMeWhy)
+
 ---
 
 *Projeto desenvolvido com dedicação para aprendizado e aplicação prática de conceitos de Data Lakehouse. 🧙‍♂️*
