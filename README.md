@@ -72,7 +72,7 @@ Cada bloco verde indica execução bem-sucedida no Cluster de Tiago Silva, e a s
 
 Este projeto é baseado na playlist **"Lago do Mago"** de **Téo Me Why**, disponível no YouTube. Agradecimentos especiais ao criador por compartilhar conhecimentos valiosos sobre engenharia de dados no Databricks.
 
-🔗 [Playlist Lago do Mago - YouTube](https://www.youtube.com/playlist?list=...) *(Substitua pelo link real se disponível)*
+🔗 [Playlist Lago do Mago - YouTube](https://www.youtube.com/playlist?list=PLvlkVRRKOYFTcLehYZ2Bd5hGIcLH0dJHE)
 
 ---
 
