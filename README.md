@@ -76,6 +76,11 @@ Este projeto é baseado na playlist **"Lago do Mago"** de **Téo Me Why**, dispo
 
 GitHub: [@TeoMeWhy](https://github.com/TeoMeWhy)
 
+## Autores e Contribuições
+
+- **Tiago Silva** (@tmarsbr) - Desenvolvedor principal e implementador do projeto no Databricks.
+- **Teo Calvo** (@TeoCalvo) - Criador da playlist "Lago do Mago" e fonte de inspiração para as melhores práticas de engenharia de dados.
+
 ---
 
 *Projeto desenvolvido com dedicação para aprendizado e aplicação prática de conceitos de Data Lakehouse. 🧙‍♂️*
