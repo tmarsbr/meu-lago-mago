@@ -68,6 +68,34 @@ Cada bloco verde indica execução bem-sucedida no Cluster de Tiago Silva, e a s
 - Integração avançada de CDC e otimização de performance.
 - Implementação de dashboards e relatórios finais.
 
+## Aula 3 — CDC com streaming
+
+![Stream pipeline](docs/stream.png)
+
+Nesta aula implementamos ingestão contínua de eventos CDC (Change Data Capture) usando Structured Streaming do Spark para manter a camada Bronze atualizada em tempo quase real.
+
+- Abordagem:
+	- Ler arquivos CDC (Parquet/JSON) como stream com `spark.readStream`.
+	- Usar um schema explícito capturado a partir de amostras para evitar inferência dinâmica.
+	- Gravar em Delta Lake com `checkpointLocation` para garantir consistência entre execuções.
+	- Aplicar merges incrementais em tabelas Bronze para refletir inserts/updates/deletes.
+
+- Notebooks relacionados:
+	- `src/bronze/ingestao.ipynb` — contém a implementação do streaming (captura de schema, leitura via `spark.readStream`, checkpoint e `writeStream`).
+	- `src/bronze/bronze_transacao.ipynb` — adaptações para merges a partir de eventos CDC.
+
+- Como executar (resumo):
+	1. Preparar a pasta de raw CDC (ex.: `/mnt/raw/cdc/<tabela>/`) com arquivos de eventos.
+	2. Ajustar variáveis de caminho e nomes de tabela no notebook.
+	3. Executar a célula que inicia o stream (`stream.start()`) no Databricks.
+	4. Monitorar o progresso no UI de Streaming do Databricks e validar escrita em Delta.
+
+- Observações e recomendações:
+	- Defina `checkpointLocation` em storage persistente (ADLS/S3) para recuperação correta.
+	- Ajuste `maxFilesPerTrigger` / `trigger` para balancear latência e throughput.
+	- Para operações de delete no CDC, trate tombstones ou implemente lógica de soft-delete antes do merge.
+	- Use orquestração (Lakeflow Jobs) para evitar conflitos de escrita e gerenciar dependências.
+
 ## Créditos e Referências
 
 Este projeto é baseado na playlist **"Lago do Mago"** de **Téo Me Why**, disponível no YouTube. Agradecimentos especiais ao criador por compartilhar conhecimentos valiosos sobre engenharia de dados no Databricks.
